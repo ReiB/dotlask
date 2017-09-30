@@ -2,13 +2,29 @@
 <html>
     <head>
         {% block head %}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"/>
             <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
             <title>{% block title %}{% endblock %} - My Webpage</title>
         {% endblock %}
     </head>
     <body>
+        <div id="header">
+            <div class="grid-x grid-padding-x">
+                <div class="cell text-center align-self-middle"><h5 class="header">User Management with Flask</h5></div>
+            </div>
+        </div>
+        <div id="content">
+        
         {% block content %}
-
+                        
         {% endblock %}
+        
+        </div>
+            
+        <div id="footer">
+            <div class="grid-x grid-padding-x">
+                <div class="cell text-center align-self-middle"><h5 class="header">Powered by Flask</h5></div>
+            </div>
+        </div>
     </body>
 </html>
